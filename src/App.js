@@ -23,6 +23,7 @@ const App = (props) => {
   }
 
 
+
   return (
     <div className="boxes">
       <div className="box">
@@ -43,7 +44,6 @@ const mapStateToProps = state => {
     additionalPrice: state.additionalPrice,
     displayedCar: state.car,
     storedCars: state.store,
-    
   }
 }
 

@@ -19,10 +19,9 @@ const App = (props) => {
 
   const addAction = () => {
     console.log('add')
-    // props.addFeature()
+    
   }
 
-  
 
   return (
     <div className="boxes">
@@ -31,7 +30,7 @@ const App = (props) => {
         <AddedFeatures car={props.displayedCar} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.storedCars} addAction={addAction} />
+        <AdditionalFeatures store={props.storedCars} addFeature={props.addFeature} />
         <Total car={props.displayedCar} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -44,6 +43,7 @@ const mapStateToProps = state => {
     additionalPrice: state.additionalPrice,
     displayedCar: state.car,
     storedCars: state.store,
+    
   }
 }
 

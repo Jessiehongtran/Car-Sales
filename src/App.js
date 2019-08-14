@@ -4,7 +4,7 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { connect } from 'react-redux';
-import {addFeature, removeFeature} from './actions'
+import {addFeature, removeFeature, increasePrice} from './actions'
 
 const App = (props) => {
   console.log('props in App', props)
@@ -25,7 +25,7 @@ const App = (props) => {
         <AddedFeatures car={props.displayedCar} removeFeature={removeFeature} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.storedCars} addFeature={props.addFeature} />
+        <AdditionalFeatures store={props.storedCars} addFeature={props.addFeature} increasePrice={props.increasePrice}/>
         <Total car={props.displayedCar} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -43,5 +43,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {addFeature, removeFeature}
+  {addFeature, removeFeature, increasePrice}
 )(App);

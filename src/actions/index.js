@@ -13,3 +13,7 @@ export const removeFeature = (id) => {
 export const increasePrice = (price) => {
     return {type: 'INCREASE_PRICE', payload: price}
 }
+
+export const reducePrice = (price) => {
+    return {type: 'REDUCE_PRICE', payload: price}
+}

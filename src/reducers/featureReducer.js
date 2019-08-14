@@ -39,6 +39,12 @@ export const featureReducer = (state=initialState, action) => {
                 additionalPrice: state.additionalPrice + action.payload
             }
 
+        case 'REDUCE_PRICE':
+            return {
+                ...state,
+                additionalPrice: state.additionalPrice - action.payload
+            }
+
         default:
             return state;
     };

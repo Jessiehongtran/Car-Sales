@@ -11,7 +11,7 @@ const AdditionalFeatures = props => {
           {props.store.map(item => (
             // console.log('item in AdditionalFeatures', item)
             // console.log('function', props.addFeature)
-            <AdditionalFeature key={item.id} feature={item} addFeature = {props.addFeature} increasePrice = {props.increasePrice}/>
+            <AdditionalFeature key={item.id} feature={item} addFeature = {props.addFeature} increasePrice = {props.increasePrice} updatePrice = {props.updatePrice}/>
           ))}
         </ol>
       ) : (

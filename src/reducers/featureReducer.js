@@ -45,6 +45,12 @@ export const featureReducer = (state=initialState, action) => {
                 additionalPrice: state.additionalPrice - action.payload
             }
 
+        case 'UPDATE_PRICE':
+            return {
+                ...state,
+                additionalPrice: state.additionalPrice + action.payload1 - action.payload2
+            }
+
         default:
             return state;
     };

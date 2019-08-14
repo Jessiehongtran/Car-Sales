@@ -17,3 +17,7 @@ export const increasePrice = (price) => {
 export const reducePrice = (price) => {
     return {type: 'REDUCE_PRICE', payload: price}
 }
+
+export const updatePrice = (add,remove) => {
+    return {type: 'UPDATE_PRICE', payload1: add, payload2: remove}
+}

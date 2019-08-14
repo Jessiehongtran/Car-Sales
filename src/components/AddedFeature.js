@@ -5,7 +5,7 @@ const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick = {() => {props.removeFeature(props.feature.id); props.reducePrice(props.feature.price)}}>X</button>
+      <button className="button" onClick = {() => {props.removeFeature(props.feature.id); props.updatePrice(0, props.feature.price)}}>X</button>
       {props.feature.name}
     </li>
   );
@@ -13,4 +13,6 @@ const AddedFeature = props => {
 
 export default AddedFeature;
 
+
+//props.reducePrice(props.feature.price); 
 

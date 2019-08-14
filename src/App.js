@@ -4,7 +4,7 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { connect } from 'react-redux';
-import {addFeature, removeFeature, increasePrice, reducePrice} from './actions'
+import {addFeature, removeFeature, increasePrice, reducePrice, updatePrice} from './actions'
 
 const App = (props) => {
   console.log('props in App', props)
@@ -22,10 +22,10 @@ const App = (props) => {
     <div className="boxes">
       <div className="box">
         <Header car={props.displayedCar} />
-        <AddedFeatures car={props.displayedCar} removeFeature={removeFeature} reducePrice={props.reducePrice}/>
+        <AddedFeatures car={props.displayedCar} removeFeature={removeFeature} reducePrice={props.reducePrice} updatePrice = {props.updatePrice}/>
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.storedCars} addFeature={props.addFeature} increasePrice={props.increasePrice}/>
+        <AdditionalFeatures store={props.storedCars} addFeature={props.addFeature} increasePrice={props.increasePrice} updatePrice = {props.updatePrice}/>
         <Total car={props.displayedCar} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -43,5 +43,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {addFeature, removeFeature, increasePrice, reducePrice}
+  {addFeature, removeFeature, increasePrice, reducePrice, updatePrice}
 )(App);
